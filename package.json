@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1",
-    "@scramjet/transform": "^2.0.0"
+    "http-proxy-middleware": "^2.0.1",
+    "node-fetch": "^2.6.1"
   }
 }
