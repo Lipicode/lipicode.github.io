@@ -1,0 +1,12 @@
+{
+  "name": "forx-proxy",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "@scramjet/transform": "^2.0.0"
+  }
+}
