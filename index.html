@@ -41,12 +41,7 @@
       responseOutput.textContent = "Fetching...";
 
       try {
-        const response = await fetch("https://your-heroku-app.herokuapp.com/proxy", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ url: urlInput })
-        });
-
+        const response = await fetch(`/proxy?url=${encodeURIComponent(urlInput)}`);
         if (!response.ok) {
           Swal.fire("Error", `Failed to fetch: ${response.statusText}`, "error");
           return;
@@ -54,7 +49,6 @@
 
         const text = await response.text();
         responseOutput.textContent = text;
-        Backbone.trigger("fetchComplete", text);
       } catch {
         Swal.fire("Error", "An error occurred while fetching the URL.", "error");
       }
