@@ -1,1 +1,1 @@
-# CultureGOT
+# CultureGPT
